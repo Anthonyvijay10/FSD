@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Movie Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #20232a;
+            color: #61dafb;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .movie {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-align: center;
+            width: 200px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .movie:hover {
+            transform: scale(1.05);
+        }
+        .small-img {
+            width: 100%;
+            height: auto;
+        }
+        .info {
+            padding: 15px;
+        }
+        .info h2 {
+            margin: 10px 0;
+            font-size: 1.25rem;
+        }
+        .info p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+    <script>
+        function showDetails(movieTitle, imdbRating, duration) {
+            alert(`Movie: ${movieTitle}\nIMDb Rating: ${imdbRating}\nDuration: ${duration}`);
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Marvel Movie Collection</h1>
+</header>
+
+<div class="container">
+    <div class="movie" onclick="showDetails('Iron Man', '7.9', '2h 6m')">
+        <h2>Iron Man</h2>
+        <img class="small-img" src="C:\\Anthony\\My_Projects\\FSD\\img\\ironman.webp" alt="Iron Man">
+        <p>Release Year: 2008</p>
+    </div>
+
+    <div class="movie" onclick="showDetails('The Avengers', '8.0', '2h 23m')">
+        <h2>The Avengers</h2>
+        <img class="small-img" src="C:\\Anthony\\My_Projects\\FSD\\img\\avengers.jpg" alt="The Avengers">
+        <p>Release Year: 2012</p>
+    </div>
+
+    <div class="movie" onclick="showDetails('Avengers: Endgame', '8.4', '3h 1m')">
+        <h2>Avengers: Endgame</h2>
+        <img class="small-img" src="C:\\Anthony\\My_Projects\\FSD\\img\\Avengers_Endgame_poster.jpg" alt="Avengers: Endgame">
+        <p>Release Year: 2019</p>
+    </div>
+</div>
+
+</body>
+</html>
